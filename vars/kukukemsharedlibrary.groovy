@@ -4,11 +4,11 @@ def call (string nodejsgoal){
     sh "npm install"
   }
   else if ("$nodejsgoal" == "test"){
-    sh "testing app for bugs"
+    sh "echo testing app for bugs"
     sh "npm run sonar"
   }
   else if ("$nodejsgoal" == "backup"){
-    sh "backing up artifact in nexus"
+    sh "echo backing up artifact in nexus"
     sh "npm publish"
   }
 }
